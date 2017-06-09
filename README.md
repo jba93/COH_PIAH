@@ -53,45 +53,6 @@ fi,a é o valor de cada traço linguístico i no texto a; e
 fi,b é o valor de cada traço linguístico i no texto b.
 Perceba que quanto mais similares a e b forem, menor Sab será. Para cada texto, você deve calcular o grau de similaridade com a assinatura do portador de COH-PIAH e no final exibir qual o texto que mais provavelmente foi escrito por algum aluno infectado.
 
-*Exemplo:*
-$ > python3 coh_piah.py
-Bem-vindo ao detector automático de COH-PIAH.
-Entre o tamanho medio de palavra: 4.79
-Entre a relação Type-Token: 0.72
-Entre a Razão Hapax Legomana: 0.56
-Entre o tamanho médio de sentença: 80.5
-Entre a complexidade média da sentença: 2.5
-Entre o tamanho medio de frase: 31.6
-Digite o texto 1 (aperte enter para sair): Navegadores antigos tinham uma frase 
-gloriosa:"Navegar é preciso; viver não é preciso". Quero para mim o espírito 
-[d]esta frase, transformada a forma para a casar como eu sou: Viver não é 
-necessário; o que é necessário é criar. Não conto gozar a minha vida; nem em 
-gozá-la penso. Só quero torná-la grande,ainda que para isso tenha de ser o meu 
-corpo e a (minha alma) a lenha desse fogo. Só quero torná-la de toda a 
-humanidade;ainda que para isso tenha de a perder como minha. Cada vez mais assim 
-penso.Cada vez mais ponho da essência anímica do meu sangueo propósito impessoal 
-de engrandecer a pátria e contribuirpara a evolução da humanidade.É a forma que 
-em mim tomou o misticismo da nossa Raça.
-Digite o texto 2 (aperte enter para sair): Voltei-me para ela; Capitu tinha os 
-olhos no chão. Ergueu-os logo, devagar, e ficamos a olhar um para o outro... 
-Confissão de crianças, tu valias bem duas ou três páginas, mas quero ser 
-poupado. Em verdade, não falamos nada; o muro falou por nós. Não nos movemos, as 
-mãos é que se estenderam pouco a pouco, todas quatro, pegando-se, apertando-se, 
-fundindo-se. Não marquei a hora exata daquele gesto. Devia tê-la marcado; sinto 
-a falta de uma nota escrita naquela mesma noite, e que eu poria aqui com os 
-erros de ortografia que trouxesse, mas não traria nenhum, tal era a diferença 
-entre o estudante e o adolescente. Conhecia as regras do escrever, sem suspeitar 
-as do amar; tinha orgias de latim e era virgem de mulheres. 
-Digite o texto 3 (aperte enter para sair): NOSSA alegria diante dum sistema 
-metafisico, nossa satisfação em presença duma construção do pensamento, em que a 
-organização espiritual do mundo se mostra num conjunto lógico, coerente a 
-harmônico, sempre dependem eminentemente da estética; têm a mesma origem que o 
-prazer, que a alta satisfação, sempre serena afinal, que a atividade artística 
-nos proporciona quando cria a ordem e a forma a nos permite abranger com a vista 
-o caos da vida, dando-lhe transparência.
-Digite o texto 4 (aperte enter para sair):
-O autor do texto 2 está infectado com COH-PIAH
-
 *Funções de suporte*
 
 As seguintes funções devem ser utilizadas no seu programa; algumas já estão implementadas, outras devem ser implementadas por você. Sinta-se livre para criar funções adicionais, caso necessário. Utilize este esqueleto como base para começar o seu programa.
