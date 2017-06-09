@@ -56,7 +56,6 @@ def n_palavras_unicas(lista_palavras):
     return unicas
 
 def n_palavras_diferentes(lista_palavras):
-    #print("ENTROU NO n_palavras_diferentes")
     '''Essa funcao recebe uma lista de palavras e devolve o numero de palavras diferentes utilizadas'''
     freq = dict()
     for palavra in lista_palavras:
@@ -70,7 +69,6 @@ def n_palavras_diferentes(lista_palavras):
 
 def compara_assinatura(as_a, as_b):
     '''IMPLEMENTAR. Essa funcao recebe duas assinaturas de texto e deve devolver o grau de similaridade nas assinaturas.'''
-    #print("ENTROU NO COMPARA ASSINATURA")
     S = 0
     for i in range (0, 6): #i vai de 0 a 5 = 6 traços linguísticos
         S = S+ (abs(as_a[i] - as_b[i]))
@@ -82,9 +80,8 @@ def compara_assinatura(as_a, as_b):
 
 def calcula_assinatura(texto):
     '''IMPLEMENTAR. Essa funcao recebe um texto e deve devolver a assinatura do texto.'''
-    #print("ENTROU NO CALCULA ASSINATURA")
     lista_de_palavras = separa_palavras(texto)
-    n_total_palavras = len(separa_palavras(texto))
+    n_total_palavras = len(lista_de_palavras)
 
     tamanho_palavras = 0
     for i in range (n_total_palavras):
@@ -96,12 +93,9 @@ def calcula_assinatura(texto):
     
     hapax_legomana = n_palavras_unicas(texto)/n_total_palavras
 
-    
-
     n_total_sentencas = len(separa_sentencas(texto))
 
     n_total_frases = len(separa_frases(texto))
-
     
     tamanho_medio_sentenca = tamanho_palavras/n_total_sentencas
     
@@ -117,12 +111,8 @@ def calcula_assinatura(texto):
 
 def avalia_textos(textos, ass_cp):
     #IMPLEMENTAR. Essa funcao recebe uma lista de textos e deve devolver o numero (1 a n) do texto com maior probabilidade de ter sido infectado por COH-PIAH.
-    #print("entrou no avalia textos")
-    i = 0
-    #print ("LEN DOS TEXTOS = ", len(textos))
-    #print ("I ===", i+1)
+    i = 1
     assinatura_texto = calcula_assinatura(textos[i]) #calcula a assinatura do primeiro texto
-    #print ("calculou a assinatura do primeiro texto")
     grau_similaridade = compara_assinatura(assinatura_texto, ass_cp) #verifica o grau de similaridade do primeiro texto com a assinatura do aluno
                                                                             #infectado com COH-PIAH
     
@@ -130,24 +120,20 @@ def avalia_textos(textos, ass_cp):
     texto_infectado = i   #o texto 0 será definido como o texto infectado, inicialmente
     i = i+1
     while i <(len (textos)): #depois e preciso fazer o mesmo com o restante dos textos
-        #print ("I ===", i+1)
         assinatura_texto = calcula_assinatura(textos[i])
         grau_similaridade = compara_assinatura(assinatura_texto, ass_cp) #cp = coh-piah
         if grau_similaridade < menor_grau:  #se o texto sendo analisado tem o grau menor do que o armazenado, 
             menor_grau = grau_similaridade  #substitui o valor
             texto_infectado = i             #e também o índice do texto infectado
         i = i+1
-        #print ("calculou a assinatura dos outros textos")
-            
-    print ("O autor do texto %d está infectado com COH-PIAH" %(texto_infectado+1))
-    return texto_infectado+1
+                  
+    print ("O autor do texto %d está infectado com COH-PIAH" %(texto_infectado))
+    return texto_infectado
     pass
 
 def main():
     assinatura_cp = le_assinatura() #lê a assinatura do aluno infectado com COH-PIAH e retorna a assinatura, que é uma lista contendo os 6 traços linguísticos
-    #print("leu assinatura cp")
     textos_lidos = le_textos()  #lê os textos e retorna uma lista de textos que serão comparados com a assinatura do aluno infectado com COH-PIAH
-    #print("leu os textos")
     avalia_textos(textos_lidos, assinatura_cp) #todos os textos serão comparados com a assinatura do aluno infectado com COH-PIAH para ver qual é mais parecido
 
 main()
