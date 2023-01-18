@@ -1,5 +1,4 @@
 # COH_PIAH
-Atividade final proposta no curso de Python (parte 1) criado pela USP na plataforma Coursera.
 
 ### Tecnologias utilizadas
 Python e IDLE Python
@@ -8,7 +7,8 @@ Python e IDLE Python
 https://www.coursera.org/learn/ciencia-computacao-python-conceitos/programming/oUnlk/programa-completo-similaridades-entre-textos-caso-coh-piah
 
 ### Descrição do Desafio
-*Introdução*
+
+Atividade final proposta no curso de Python (parte 1) criado pela USP na plataforma Coursera.
 
 John é monitor na matéria de Introdução à Produção Textual I na Penn State University (PSU). Durante esse período, John descobriu que uma epidemia de COH-PIAH estava se espalhando pela PSU. Esses doença rara e altamente contagiosa faz com que as pessoas contaminadas produzam textos extremamente semelhantes de forma involuntária. Após a entrega da primeira redação, John desconfiou que alguns alunos estavam sofrendo de COH-PIAH. John, se preocupando com a saúde da turma, resolveu buscar um método para identificar os casos de COH-PIAH. Para isso, ele necessita da sua ajuda para desenvolver um programa que o auxilie a identificar os alunos contaminados.
 
